@@ -18,6 +18,18 @@ function invoke {
         fi
 }
 
+if [ $# -eq 0 ]
+  then
+    echo "No arguments supplied"
+    exit 1
+fi
+
+host $1
+if [[ $? -ne 0 ]]; then
+    echo "$1 is not a valid hostname"
+    exit 1
+fi
+
 scp ./init1.sh root@$1:/root
 invoke $1 root ./init1.sh
 
