@@ -14,6 +14,7 @@ EOL
 
 chmod +x ./sueditor.sh
 apt-get upgrade -y vim
+apt-get install -y software-properties-common wget curl git-core python python-pip
 adduser --system --shell /bin/bash ubuntu
 ./sueditor.sh
 
