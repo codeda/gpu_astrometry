@@ -1,6 +1,6 @@
 #!/bin/bash
 apt-get update
-apt-get -y upgrade
+DEBIAN_FRONTEND=noninteractive apt-get -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" upgrade
 cat >/root/sueditor.sh <<EOL
 #!/bin/sh
 if [ -z "\$1" ]; then
