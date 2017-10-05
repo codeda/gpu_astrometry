@@ -1,5 +1,11 @@
 #!/bin/bash
 
+cat >/home/ubuntu/.bashrc <<EOL
+export LC_CTYPE = "UTF-8"
+EOL
+
+export LC_CTYPE = "UTF-8"
+
 sudo apt-get upgrade python
 sudo apt-get upgrade python-pip
 sudo pip install --user numpy scipy matplotlib ipython jupyter pandas sympy nose

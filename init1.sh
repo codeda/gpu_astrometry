@@ -1,4 +1,10 @@
 #!/bin/bash
+
+cat >/root/.bashrc <<EOL
+export LC_CTYPE = "UTF-8"
+EOL
+export LC_CTYPE = "UTF-8"
+
 apt-get update
 DEBIAN_FRONTEND=noninteractive apt-get -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" upgrade
 cat >/root/sueditor.sh <<EOL
