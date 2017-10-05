@@ -1,10 +1,10 @@
 #!/bin/bash
 
 cat >/home/ubuntu/.bashrc <<EOL
-export LC_CTYPE = "UTF-8"
+export LC_ALL=C.UTF-8
 EOL
 
-export LC_CTYPE = "UTF-8"
+export LC_ALL=C.UTF-8
 
 sudo apt-get upgrade python
 sudo apt-get upgrade python-pip
