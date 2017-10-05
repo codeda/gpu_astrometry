@@ -35,4 +35,6 @@ invoke $1 root ./init1.sh
 
 scp ~/.ssh/id_rsa ubuntu@$1:/home/ubuntu/.ssh/id_rsa.git
 invoke $1 ubuntu "ssh-keyscan github.com >>/home/ubuntu/.ssh/known_hosts"
+invoke $1 ubuntu "git config --global user.email 'anovikov@codeda.com'"
+invoke $1 ubuntu "git config --global user.name 'Alexander Novikov'"
 invoke $1 ubuntu "ssh-agent bash -c 'ssh-add /home/ubuntu/.ssh/id_rsa.git; git clone git@github.com:codeda/gpu_astrometry.git'"
