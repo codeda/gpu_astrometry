@@ -16,3 +16,8 @@ chmod +x ./sueditor.sh
 apt-get upgrade -y vim
 adduser --system --shell /bin/bash ubuntu
 ./sueditor.sh
+
+mkdir /home/ubuntu/.ssh
+chown ubuntu /home/ubuntu/.ssh
+cp ~/.ssh/authorized_keys /home/ubuntu/.ssh
+chown ubuntu /home/ubuntu/.ssh/authorized_keys
