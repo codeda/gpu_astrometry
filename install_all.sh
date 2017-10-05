@@ -1,7 +1,7 @@
 #!/bin/bash
 
 function invoke {
-        ssh_command="ssh  -o StrictHostKeyChecking=no -o BatchMode=yes -o ConnectTimeout=50 -l $1 $2 2>&1"
+        ssh_command="ssh  -o StrictHostKeyChecking=no -o BatchMode=yes -o ConnectTimeout=50 -l $2 $1 $3 2>&1"
         echo -e "$ssh_command\n"
 
         status=$($ssh_command)
@@ -18,5 +18,5 @@ function invoke {
         fi
 }
 
-scp ./init1.sh $1:/root
-invoke root init1.sh
+scp ./init1.sh root@$1:/root
+invoke $1 root ./init1.sh
