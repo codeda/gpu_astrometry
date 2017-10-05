@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="20eb2239-04c6-4ee5-82d9-76970231a4ac" name="packet" url="http://4b8705b5.packethost.net">
+        <fileTransfer host="4b8705b5.packethost.net" port="22" privateKey="D:\Users\User\Documents\key_private2" rootFolder="/home/ubuntu" accessType="SFTP" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
