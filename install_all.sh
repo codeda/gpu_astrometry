@@ -31,6 +31,7 @@ if [[ $? -ne 0 ]]; then
 fi
 
 ssh-keygen -R $1
+ssh-keygen -R `getent hosts $1 | awk '{ print $1 }'`
 
 scp ./init1.sh root@$1:/root
 invoke $1 root ./init1.sh
