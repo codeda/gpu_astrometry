@@ -18,7 +18,7 @@ mean, median, std = sigma_clipped_stats(data, sigma=3.0, iters=5)
 print((mean, median, std))
 
 from photutils import IRAFStarFinder
-daofind = IRAFStarFinder(fwhm=6.0, threshold=5.*std)
+daofind = IRAFStarFinder(fwhm=3.0, threshold=5.*std)
 sources = daofind(data - median)
 #print(sources)
 
