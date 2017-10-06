@@ -1,7 +1,7 @@
 #!/bin/bash
 
 function invoke {
-        ssh_command="ssh  -o StrictHostKeyChecking=no -o BatchMode=yes -o ConnectTimeout=50 -l $2 $1 /bin/bash -c \"$3\" 2>&1"
+        ssh_command="ssh -o StrictHostKeyChecking=no -o BatchMode=yes -o ConnectTimeout=50 -l $2 -t $1 /bin/bash -c \"$3\" 2>&1"
         echo -e "$ssh_command\n"
 
         status=$($ssh_command)
