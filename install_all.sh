@@ -30,6 +30,8 @@ if [[ $? -ne 0 ]]; then
     exit 1
 fi
 
+ssh-keygen -R $1
+
 scp ./init1.sh root@$1:/root
 invoke $1 root ./init1.sh
 
